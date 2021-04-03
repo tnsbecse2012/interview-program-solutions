@@ -18,7 +18,9 @@ public class SprintTraining {
 		int start = 0;
 		int end = 0;
 
+		// loop to iterate sprints
 		for (int j = 1; j < sprints.size(); j++) {
+			// stand & end variable to add value to the sprints
 			if (sprints.get(j - 1) > sprints.get(j)) {
 				start = sprints.get(j);
 				end = sprints.get(j - 1);
@@ -26,7 +28,8 @@ public class SprintTraining {
 				start = sprints.get(j - 1);
 				end = sprints.get(j);
 			}
-			
+
+			// swap start and end based on higher/lower value
 			int k = start;
 			while (k != end + 1) {
 				visitedSprintMap.put(k, visitedSprintMap.get(k) == null ? 1 : visitedSprintMap.get(k) + 1);
@@ -36,6 +39,7 @@ public class SprintTraining {
 		return mostVisitedSprint(visitedSprintMap);
 	}
 
+	// method to get higher sprint's value for lowest sprint
 	private static int mostVisitedSprint(HashMap<Integer, Integer> visitedSprintMap) {
 		int mostVisitedSprint = 1;
 		int mostVisitedSprintValue = 0;
