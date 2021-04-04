@@ -1,4 +1,4 @@
-package main.java.unknown_company;
+package main.java.ford;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -52,3 +52,7 @@ public class SprintTraining {
 		return mostVisitedSprint;
 	}
 }
+
+/**
+ * Questions will be available in 'questions/ford' folder.
+ */
